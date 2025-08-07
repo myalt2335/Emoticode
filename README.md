@@ -13,9 +13,11 @@ D: = <
 O_O = [
 ```
 
-## Additional stuff
+## Enhanced Syntax Stuff
 
-```:O_[name]``` is the opening tag for a macro. to close a macro you need a matching ```:|``` tag.
+```:O_[name]``` is the opening tag for a macro. to close a macro you need a matching ```:|``` tag. Names must be in brackets.
+
+```:>_[name]``` is how you call a defined macro. Names must be in brackets.
 
 ```:N_[syntax]``` Repeats the given syntax N times. Example: If ```N``` is 3, ```:N_:)``` expands to ```:) :) :)```.
 
