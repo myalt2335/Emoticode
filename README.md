@@ -19,7 +19,7 @@ O_O = [
 
 ```:>_[name]``` is how you call a defined macro. Names must be in brackets.
 
-```:N_[syntax]``` Repeats the given syntax N times. Example: If ```N``` is 3, ```:N_:)``` expands to ```:) :) :)```.
+```:N_[syntax]``` Repeats the given syntax N times. Example: If ```N``` is 3, ```:N_:)``` expands to ```:) :) :)```. Syntax should not be in brackets.
 
 ```:F``` is a command which forces the text buffer to flush, useful since the interpreter only flushes the frame buffer on a newline or at the end of the program.
 
