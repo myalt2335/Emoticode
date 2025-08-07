@@ -34,5 +34,5 @@ Macros are recursive, you can call a macro inside of another macro, **but self r
 
 ## Credits:
 
-- https://github.com/Zomis/Brainduck/blob/master/src/main/resources/fizzbuzz.bf for the original fizzbuzz program which fizzbuzz.O_O is based off of
-- Erik Bosman for the original Mandelbrot brainfuck program which mandelbrot.O_O is based off of.
+- [Simon Forsberg](https://github.com/Zomis) for the original fizzbuzz program which fizzbuzz.O_O is based off of
+- Erik Bosman (Idk where to find him sorry) for the original Mandelbrot brainfuck program which mandelbrot.O_O is based off of.
