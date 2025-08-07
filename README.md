@@ -21,7 +21,7 @@ O_O = [
 
 ```:N_[syntax]``` Repeats the given syntax N times. Example: If ```N``` is 3, ```:N_:)``` expands to ```:) :) :)```. Syntax should not be in brackets.
 
-```:F``` is a command which forces the text buffer to flush, useful since the interpreter only flushes the frame buffer on a newline or at the end of the program.
+```:F``` is a command which forces the text buffer to flush, useful since the interpreter only flushes the frame buffer on a newline or at the end of the program for performance.
 
 ```:S_"string"``` allows you to store strings to the tape. For example if you are in cell 3 and do :S_"Hello, World!\n" you will still be in cell 3 but now cells 3-16 will be overwritten to contain the ascii codes for "Hello, World!" + the newline.
 
