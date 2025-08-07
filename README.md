@@ -14,9 +14,9 @@ O_O = [
 
 ## Additional stuff
 
-:O_<name> is the opening tag for a macro. to close a macro you need a matching :| tag.
+:O_name is the opening tag for a macro. to close a macro you need a matching :| tag.
 
-:N_<syntax> is a repeater helper. For example when N is 3, :N_:) expands to 3 :)'s.
+:N_syntax is a repeater helper. For example when N is 3, :N_:) expands to 3 :)'s.
 
 Macros are recursive, you can call a macro inside of another macro, but self referencing macros are disallowed.
 
