@@ -438,7 +438,19 @@ void run_bytecode(const vector<Instruction>& program, const string& source) {
     size_t ptr = 0;
     output_buffer.clear();
 
+    size_t step_count = 0;
+    const size_t max_steps = 1000000;
+    bool had_output = false;
+
     for (size_t pc = 0; pc < program.size(); ++pc) {
+        if (++step_count > max_steps) {
+            if (!had_output) {
+                cerr << "[Runtime Warning] Auto-breaking suspected infinite loop at PC "
+                     << pc << " after " << step_count << " iterations." << endl;
+            }
+            break;
+        }
+
         const Instruction& ins = program[pc];
 
         switch (ins.op) {
@@ -482,6 +494,7 @@ void run_bytecode(const vector<Instruction>& program, const string& source) {
             case OP_PRINT: {
                 char ch = (char)tape[ptr];
                 output_buffer += ch;
+                had_output = true;
                 if (ch == '\n') {
                     cout << output_buffer;
                     cout.flush();
@@ -495,6 +508,7 @@ void run_bytecode(const vector<Instruction>& program, const string& source) {
                     cout << output_buffer;
                     cout.flush();
                     output_buffer.clear();
+                    had_output = true;
                 }
                 break;
 
@@ -554,7 +568,7 @@ int main(int argc, char *argv[]) {
     }
     string arg = argv[1];
     if (arg == "--version") {
-        cout << "Emoticode interpreter version 2.7.0 :)" << endl;
+        cout << "Emoticode interpreter version 2.7.1 :)" << endl;
         return 0;
     }
     string filename = argv[1];
