@@ -1,5 +1,6 @@
 # Emoticode
 A brainfuck based Esolang.
+https://esolangs.org/wiki/Emoticode
 
 ## Emoticode to Brainfuck mapping
 ```
